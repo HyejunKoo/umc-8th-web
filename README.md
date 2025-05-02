@@ -1,2 +1,2 @@
 # umc-8th-web
-😻 8th UMC Ewha Web Repository 😻
+🐰 UMC Ewha 8th Web Repository 🐰
