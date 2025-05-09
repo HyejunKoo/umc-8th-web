@@ -1,0 +1,30 @@
+# 기본 노드 모듈
+node_modules/
+dist/
+.build/
+.cache/
+
+#  환경 변수
+.env
+.env.local
+.env.*.local
+
+#  로그 / 디버그
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+#  Vite 관련 캐시
+.vite/
+.vscode/
+
+#  OS 별 불필요 파일
+.DS_Store
+Thumbs.db
+
+#  VSCode 설정 (optional)
+*.code-workspace
+
+#  테스트 출력물
+coverage/
