@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grid + Flex Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin:0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header menu menu"
+        "hero hero hero"
+        "main space image"
+        "main space extra"
+        "banner banner banner";
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows:
+        70px      /* header/menu */
+        200px     /* hero */
+        1fr       /* main/image */
+        1fr       /* main/extra */
+        60px;     /* banner */
+      height: 100vh;
+    }
+
+    .box  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .header { grid-area: header; background: #0f172a; }
+    .menu   { grid-area: menu; background: #f43f5e; }
+    .hero   { grid-area: hero; background: #3b82f6; }
+    .main   { grid-area: main; background: #1e3a8a; }
+    .space  { grid-area: space; background: #ffffff; } /* 공백은 흰 계열로 */
+    .image  { grid-area: image; background: #bae6fd; color: #1e293b;}
+    .extra  { grid-area: extra; background: #34d399; color: #1e293b;}
+    .banner { grid-area: banner; background: #facc15; color: #1e293b; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box header">HEADER</div>
+    <div class="box menu">MENU</div>
+    <div class="box hero">HERO</div>
+    <div class="box main">MAIN</div>
+    <div class="box space"> </div>
+    <div class="box image">IMAGE</div>
+    <div class="box extra">EXTRA</div>
+    <div class="box banner">BANNER</div>
+  </div>
+</body>
+</html>
